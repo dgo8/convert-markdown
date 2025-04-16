@@ -1,0 +1,177 @@
+@page {
+    size: A4; 
+    margin: 0;
+    margin-bottom: 1in; 
+    margin-top: 1in;
+  }
+@page :first {
+    margin-top: 0in !important;
+}
+
+body {
+    font-family: 'Optima';
+    margin: 1in;
+    max-width: 1200px;
+    line-height: 1.2;
+    font-size: 1.1em;
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    font-size: 1.1em;
+    color: #000000;
+    text-align: justify;
+}
+
+h1 { 
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: .8em;
+    margin-top: 0.8em !important;
+    color: #000;
+    line-height: 1.2;
+    text-align: center;
+    margin-left: .1em;
+    page-break-before: always;
+}
+
+h1 + * {
+    page-break-before: avoid;
+}
+
+.content > h1:first-child {
+    page-break-before: avoid;
+}
+
+h2 { 
+    font-size: 1.6em;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.1em;
+    margin-top: .4em;
+    margin-bottom: .2em !important;
+    color: #000;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+    margin-top: .4em;
+    margin-bottom: .2em !important;
+    color: #000;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+    margin-top: 0.4em;
+    margin-bottom: .1em !important;
+    color: #000;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+    margin-top: 0.4em;
+    margin-bottom: .1em !important;
+    color: #000;
+    margin-left: .3em;
+}
+
+h6 {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+    margin-bottom: .1em !important;
+    color: #000;
+    margin-left: .3em;
+}
+
+p {
+    margin-bottom: 0.3em !important;
+    margin-top: 0em !important;
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}
+
+li {
+    font-size: 1em;
+    margin-bottom: .4em !important;
+    margin-top: 0em !important;
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}
+
+ol, ul {
+    font-size: 1em;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 99%;
+    margin: 0.1em auto;
+    margin-top: 0.2em !important;
+    font-size: 0.96em;
+    line-height: 1.3;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e4e8;
+}
+
+td {
+    border: none;
+    color: #000000;
+    border-bottom: 1px solid #e0e4e8;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+th {
+    display: table-cell;
+    color: #262a58;
+    padding: 8px 8px 6px 8px;
+    text-align: left;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e0e4e8;
+    font-size: 1.05em;
+    letter-spacing: 0.01em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td:first-child {
+    padding-left: 19px;
+    color: #1f2937;
+    letter-spacing: -0.01em;
+}
+
+th:first-child {
+    padding-left: 19px;
+    letter-spacing: -0.01em;
+}
+
+.chart-container {
+    width: 70%;
+}
+
+.showdown-chart-error {
+    color: #dc2626;
+    padding: 12px;
+    border: 1px solid #dc2626;
+    border-radius: 8px;
+    background: #fef2f2;
+    margin: 10px 0;
+}

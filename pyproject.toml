@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "convert-markdown"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name="dgo8", email="your.email@example.com" },
 ]
-description = "Convert Markdown into HTML, PDF, and other formats with executed code blocks. Display charts and graphs from code."
+description = "Convert Markdown into HTML, PDF, and other formats with executed code blocks. Display charts and graphs."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [

@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: convert-markdown
-Version: 0.1.0
-Summary: Convert markdown to HTML, PDF, DOCX, and PPTX. Supports code block execution and plot rendering. Create stylish reports with charts and graphs from LLM outputs
+Version: 0.1.1
+Summary: Convert Markdown into HTML, PDF, and other formats with executed code blocks. Display charts and graphs.
 Author-email: dgo8 <your.email@example.com>
 Project-URL: Homepage, https://github.com/dgo8/convert_markdown
 Project-URL: Bug Tracker, https://github.com/dgo8/convert_markdown/issues
@@ -24,11 +24,11 @@ Requires-Dist: seaborn>=0.11.0
 Requires-Dist: kaleido>=0.2.0
 Dynamic: license-file
 
-# Convert Markdown with code block execution
+# Convert Markdown into HTML, PDF, and other formats with executed code blocks. 
 
 Python package that converts markdown to HTML, PDF, DOCX, and PPTX. Supports code block execution and plot rendering. Create stylish reports with charts and graphs from LLM outputs.
 
-## Create visual reports with charts from LLM outputs.
+# Display charts and graphs.
 ![Untitled](https://github.com/user-attachments/assets/7fd14765-871a-401c-8d65-516c06cb3762)
 
 

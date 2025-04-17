@@ -1,0 +1,11 @@
+.pycache/
+__pycache__/
+*__pycache__/
+*.pyc
+*.pdf
+*.docx
+*.pptx
+*.html
+*.png
+*.jpg
+*.jpeg

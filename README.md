@@ -3,7 +3,8 @@
 Python package that converts markdown text with executed code blocks to various formats. 
 
 ## Create visual reports with charts from LLM outputs.
-<img width="804" alt="demo" src="https://github.com/user-attachments/assets/4d9f61e7-04f7-40df-b725-b32f6d1c8bd4" />
+<img width="619" alt="Demo" src="https://github.com/user-attachments/assets/64aaa88f-a1bb-4059-9a45-e91bc56d2877" />
+
 
 ## Features
 

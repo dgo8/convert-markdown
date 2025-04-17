@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "convert-markdown"
-version = "0.1.1"
+version = "0.1.3"
 authors = [
   { name="dgo8", email="your.email@example.com" },
 ]
@@ -31,8 +31,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/dgo8/convert_markdown"
-"Bug Tracker" = "https://github.com/dgo8/convert_markdown/issues"
+"Homepage" = "https://github.com/dgo8/convert-markdown"
+"Bug Tracker" = "https://github.com/dgo8/convert-markdown/issues"
 
 [tool.setuptools]
 packages = ["convert_markdown", "convert_markdown.core", "convert_markdown.exporters", "convert_markdown.static"]

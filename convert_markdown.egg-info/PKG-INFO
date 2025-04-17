@@ -1,10 +1,10 @@
 Metadata-Version: 2.4
 Name: convert-markdown
-Version: 0.1.1
+Version: 0.1.3
 Summary: Convert Markdown into HTML, PDF, and other formats with executed code blocks. Display charts and graphs.
 Author-email: dgo8 <your.email@example.com>
-Project-URL: Homepage, https://github.com/dgo8/convert_markdown
-Project-URL: Bug Tracker, https://github.com/dgo8/convert_markdown/issues
+Project-URL: Homepage, https://github.com/dgo8/convert-markdown
+Project-URL: Bug Tracker, https://github.com/dgo8/convert-markdown/issues
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -43,8 +43,7 @@ Python package that converts markdown to HTML, PDF, DOCX, and PPTX. Supports cod
 ## Installation
 
 ```bash
-pip install -r requirements.txt
-pip install convert_markdown
+pip install convert-markdown
 ```
 
 ## Quick Start

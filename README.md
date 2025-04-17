@@ -17,8 +17,7 @@ Python package that converts markdown to HTML, PDF, DOCX, and PPTX. Supports cod
 ## Installation
 
 ```bash
-pip install -r requirements.txt
-pip install convert_markdown
+pip install convert-markdown
 ```
 
 ## Quick Start

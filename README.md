@@ -1,11 +1,14 @@
-# Export Markdown to HTML, PDF, DOCX, PPTX. With Executed Code Blocks.
+# Export Markdown with executed Code Blocks 
 
-A Python package that executes Python code blocks within markdown documents and exports them to various formats (PDF, DOCX, PPTX, HTML). Perfect for creating data analysis reports with live code execution.
+Python package that converts markdown text with executed code blocks to various formats. 
+
+## Create visual reports with charts from LLM outputs.
+<img width="804" alt="demo" src="https://github.com/user-attachments/assets/4d9f61e7-04f7-40df-b725-b32f6d1c8bd4" />
 
 ## Features
 
 - **Code Execution**: Execute Python code blocks directly in your markdown
-- **Multiple Export Formats**: Convert to PDF, DOCX, PPTX, and HTML
+- **Multiple Export Formats**: Markdown to PDF, Markdown to DOCX, Markdown to PPTX, and Markdown to HTML
 - **Data Visualization**: Support for Matplotlib, Plotly, and Seaborn
 - **Custom Styling**: Choose from built-in styles or define your own CSS
 - **Professional Output**: Generate publication-ready documents

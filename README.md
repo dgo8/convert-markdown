@@ -1,8 +1,8 @@
-# Convert Markdown with code block execution
+# Convert Markdown into HTML, PDF, and other formats with executed code blocks. 
 
 Python package that converts markdown to HTML, PDF, DOCX, and PPTX. Supports code block execution and plot rendering. Create stylish reports with charts and graphs from LLM outputs.
 
-## Create visual reports with charts from LLM outputs.
+# Display charts and graphs from code.
 ![Untitled](https://github.com/user-attachments/assets/7fd14765-871a-401c-8d65-516c06cb3762)
 
 

@@ -8,7 +8,7 @@ version = "0.1.0"
 authors = [
   { name="dgo8", email="your.email@example.com" },
 ]
-description = "Convert markdown to HTML, PDF, DOCX, and PPTX. Supports code block execution and plot rendering. Create stylish reports with charts and graphs from LLM outputs"
+description = "Convert Markdown into HTML, PDF, and other formats with executed code blocks. Display charts and graphs from code."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [

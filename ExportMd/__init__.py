@@ -8,7 +8,7 @@ from .exporters.docx import DOCXExporter
 from .exporters.pptx import PPTXExporter
 
 
-class ExportMd:
+class exportmd:
     def __init__(self):
         self.converter = MarkdownConverter()
         self._exporters = {
@@ -67,7 +67,7 @@ class ExportMd:
         return output
 
 # Create a module-level instance
-_instance = ExportMd()
+_instance = exportmd()
 
 # Expose the convert method at module level
 to = _instance.to 

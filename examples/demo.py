@@ -1,4 +1,4 @@
-import ExportMd
+import exportmd
 
 # Sample markdown with Python code blocks
 SAMPLE_MARKDOWN = """
@@ -139,7 +139,7 @@ def main():
     for format in formats:
         print(f"\nExporting to {format}...")
         try:
-            output_bytes = ExportMd.to(
+            output_bytes = exportmd.to(
                 markdown=SAMPLE_MARKDOWN,
                 format=format,
                 style='style1'

@@ -20,13 +20,13 @@ Python package that converts markdown text with executed code blocks to various 
 
 ```bash
 pip install -r requirements.txt
-pip install ExportMd
+pip install exportmd
 ```
 
 ## Quick Start
 
 ```python
-import ExportMd
+import exportmd
 
 markdown_content = """
 # Analysis Report
@@ -44,7 +44,7 @@ plt.show()
 ```"""
 
 # Method 1: Get bytes and save manually
-output = ExportMd.to(
+output = exportmd.to(
     markdown=markdown_content,
     style='style1', # default: 'style', 'style1', 'style2', 'style3', 'custom'
     format='pdf'    # default: 'pdf', 'docx', 'pptx', 'html'
@@ -53,7 +53,7 @@ with open('output.pdf', 'wb') as f:
     f.write(output)
 
 # Method 2: Direct to file (returns None)
-ExportMd.to(
+exportmd.to(
     markdown=markdown_content,
     format='pdf',
     output_file='output.pdf'  # File is saved directly
@@ -106,7 +106,7 @@ Choose from three built-in styles:
 - `style3`: Clean documentation theme
 
 ```python
-ExportMd.to(
+exportmd.to(
     markdown=content,
     format='pdf',
     style='style2'
@@ -126,7 +126,7 @@ body {
 }
 """
 
-ExportMd.to(
+exportmd.to(
     markdown=content,
     format='pdf',
     style='custom',

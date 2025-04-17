@@ -14,17 +14,35 @@ matplotlib.use('Agg')  # Set matplotlib backend to non-interactive
 import matplotlib.pyplot as plt
 import plotly.io as pio
 import plotly.express as px
+from ..static.styles import style, style1, style2, style3  # Import styles
 pio.renderers.default = None  # Disable plotly's default browser opening
 
 class MarkdownConverter:
     def __init__(self):
-        self.template_dir = Path(__file__).parent.parent / 'templates'
-        self.static_dir = Path(__file__).parent.parent / 'static'
-        self.css_dir = Path(__file__).parent.parent / 'static' / 'css'
+        # Define styles mapping
+        self.styles = {
+            'style': style,
+            'style1': style1,
+            'style2': style2,
+            'style3': style3
+        }
         
-        # Load base template
-        with open(self.template_dir / 'base.html', 'r') as f:
-            self.base_template = f.read()
+        # Base template
+        self.base_template = """<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:,">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <div class="content">
+        {{content}}
+    </div>
+</body>
+</html>"""
             
     def convert_to_html(self, markdown_text: str, style: str = 'style1', custom_css: str = None) -> str:
         """Convert markdown with Python code blocks to HTML"""
@@ -40,13 +58,10 @@ class MarkdownConverter:
             if style == 'custom' and custom_css:
                 css = custom_css
             else:
-                css_file = self.css_dir / f'{style}.css'
-                if not css_file.exists():
-                    print(f"Warning: Style {style} not found, falling back to style")
-                    css_file = self.css_dir / 'style.css'
-                    
-                with open(css_file, 'r') as f:
-                    css = f.read()
+                if style not in self.styles:
+                    print(f"Warning: Style {style} not found, using default style")
+                    style = 'style'
+                css = self.styles[style]
                     
             # Insert into base template with CSS
             template = self.base_template.replace('{{content}}', html)

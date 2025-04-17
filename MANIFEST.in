@@ -1,4 +1,5 @@
 include README.md
 include LICENSE
-recursive-include exportmd/static *
-recursive-include exportmd/templates * 
+recursive-include exportmd/core *.py
+recursive-include exportmd/exporters *.py
+recursive-include exportmd/static *.py 

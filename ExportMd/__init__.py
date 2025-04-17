@@ -16,14 +16,10 @@ class exportmd:
             'docx': DOCXExporter(),
             'pptx': PPTXExporter()
         }
-        
-        # Get package static directory
-        self.static_dir = Path(__file__).parent / 'static'
-        self.template_dir = Path(__file__).parent / 'templates'
 
     @staticmethod
     def to(markdown: str, format: str = 'pdf', output_file: str = None, 
-               style: str = 'style', custom_css: str = None) -> bytes:
+           style: str = 'style', custom_css: str = None) -> bytes:
         """
         Convert markdown to the specified format
         

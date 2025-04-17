@@ -35,4 +35,6 @@ dependencies = [
 "Bug Tracker" = "https://github.com/dgo8/exportmd/issues"
 
 [tool.setuptools]
-packages = ["exportmd"] 
+packages = ["exportmd", "exportmd.core", "exportmd.exporters", "exportmd.static"]
+package-dir = {"" = "."}
+include-package-data = true 

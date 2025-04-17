@@ -100,6 +100,7 @@ plt.show()
 ### Built-in Styles
 
 Choose from three built-in styles:
+- `style`: Default-plain
 - `style1`: Corporate finance theme
 - `style2`: Modern business theme
 - `style3`: Clean documentation theme

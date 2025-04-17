@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "exportmd"
+name = "convert-markdown"
 version = "0.1.0"
 authors = [
   { name="dgo8", email="your.email@example.com" },
 ]
-description = "A Python package that executes code blocks within markdown and exports to various formats"
+description = "Convert markdown to HTML, PDF, DOCX, and PPTX. Supports code block execution and plot rendering. Create stylish reports with charts and graphs from LLM outputs"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -31,10 +31,10 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/dgo8/exportmd"
-"Bug Tracker" = "https://github.com/dgo8/exportmd/issues"
+"Homepage" = "https://github.com/dgo8/convert_markdown"
+"Bug Tracker" = "https://github.com/dgo8/convert_markdown/issues"
 
 [tool.setuptools]
-packages = ["exportmd", "exportmd.core", "exportmd.exporters", "exportmd.static"]
+packages = ["convert_markdown", "convert_markdown.core", "convert_markdown.exporters", "convert_markdown.static"]
 package-dir = {"" = "."}
 include-package-data = true 

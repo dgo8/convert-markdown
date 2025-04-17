@@ -1,5 +1,5 @@
 import pytest
-import exportmd
+import convert_markdown
 import os
 
 SAMPLE_MARKDOWN = """
@@ -153,7 +153,7 @@ Several key risk factors require careful monitoring:
 
 def test_docx_export():
     # Test DOCX export
-    docx_bytes = exportmd.to(
+    docx_bytes = convert_markdown.to(
         markdown=SAMPLE_MARKDOWN, 
         format='docx',
         style='style1'
@@ -165,7 +165,7 @@ def test_docx_export():
         f.write(docx_bytes)
 
 def test_pptx_export():
-    pptx_bytes = exportmd.to(markdown=SAMPLE_MARKDOWN, format='pptx', style='style1')
+    pptx_bytes = convert_markdown.to(markdown=SAMPLE_MARKDOWN, format='pptx', style='style1')
     assert len(pptx_bytes) > 0
     assert isinstance(pptx_bytes, bytes)
     
@@ -175,19 +175,19 @@ def test_pptx_export():
 def test_file_output():
     # Test saving to file
     output_file = "test_output.pdf"
-    exportmd.to(SAMPLE_MARKDOWN, format='pdf', output_file=str(output_file))
+    convert_markdown.to(SAMPLE_MARKDOWN, format='pdf', output_file=str(output_file))
     assert os.path.exists(output_file)
     assert os.path.getsize(output_file) > 0
 
 def test_invalid_format():
     # Test invalid format
     with pytest.raises(ValueError):
-        exportmd.to(SAMPLE_MARKDOWN, format='invalid')
+        convert_markdown.to(SAMPLE_MARKDOWN, format='invalid')
 
 def test_different_styles():
     # Test different styles
     for style in ['style1', 'style2', 'style3']:
-        pdf_bytes = exportmd.to(markdown=SAMPLE_MARKDOWN, format='pdf', style=style)
+        pdf_bytes = convert_markdown.to(markdown=SAMPLE_MARKDOWN, format='pdf', style=style)
         assert len(pdf_bytes) > 0
         assert isinstance(pdf_bytes, bytes)
         
@@ -219,7 +219,7 @@ def test_custom_style():
     }
     """
     
-    pdf_bytes = exportmd.to(
+    pdf_bytes = convert_markdown.to(
         SAMPLE_MARKDOWN, 
         format='pdf',
         style='custom',
@@ -235,7 +235,7 @@ def test_custom_style():
 
 def test_html_export():
     # Test HTML export
-    html_bytes = exportmd.to(
+    html_bytes = convert_markdown.to(
         markdown=SAMPLE_MARKDOWN, 
         format='html',
         style='style1'
@@ -257,7 +257,7 @@ def test_output_file_behavior():
     """Test both output methods - direct bytes and file output"""
     
     # Test bytes output
-    pdf_bytes = exportmd.to(
+    pdf_bytes = convert_markdown.to(
         markdown=SAMPLE_MARKDOWN,
         format='pdf'
     )
@@ -266,7 +266,7 @@ def test_output_file_behavior():
     
     # Test direct file output
     output_file = "test_direct.pdf"
-    result = exportmd.to(
+    result = convert_markdown.to(
         markdown=SAMPLE_MARKDOWN,
         format='pdf',
         output_file=str(output_file)

@@ -1,4 +1,3 @@
-
 # Export Markdown to HTML, PDF, DOCX, PPTX. With Executed Code Blocks.
 
 A Python package that executes Python code blocks within markdown documents and exports them to various formats (PDF, DOCX, PPTX, HTML). Perfect for creating data analysis reports with live code execution.
@@ -38,26 +37,32 @@ plt.title("Sine Wave")
 plt.show()
 ```"""
 
+# Method 1: Get bytes and save manually
 output = ExportMd.to(
     markdown=markdown_content,
     style='style1', # default: 'style', 'style1', 'style2', 'style3', 'custom'
-    format='pdf' # default: 'pdf', 'docx', 'pptx', 'html'
+    format='pdf'    # default: 'pdf', 'docx', 'pptx', 'html'
 )
-
-# Save to file
 with open('output.pdf', 'wb') as f:
     f.write(output)
+
+# Method 2: Direct to file (returns None)
+ExportMd.to(
+    markdown=markdown_content,
+    format='pdf',
+    output_file='output.pdf'  # File is saved directly
+)
 ```
 
 Parameters:
 - `markdown`: Input markdown text
 - `format`: Output format ('pdf', 'docx', 'pptx', 'html')
-- `output_file`: Optional path to save the output
+- `output_file`: Optional path to save the output (if specified, returns None)
 - `style`: CSS style to use (default: 'style', 'style1', 'style2', 'style3', 'custom')
 - `custom_css`: Custom CSS string when style='custom'
 
 Returns:
-- `bytes`: Converted document as bytes
+- `bytes`: Converted document as bytes (or None if output_file is specified)
 
 ## Code Block Support
 

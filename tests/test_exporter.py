@@ -172,12 +172,12 @@ def test_pptx_export():
     with open('test_output.pptx', 'wb') as f:
         f.write(pptx_bytes)
 
-def test_file_output( tmp_path):
+def test_file_output():
     # Test saving to file
-    output_file = tmp_path / "test_output.pdf"
+    output_file = "test_output.pdf"
     ExportMd.to(SAMPLE_MARKDOWN, format='pdf', output_file=str(output_file))
-    assert output_file.exists()
-    assert output_file.stat().st_size > 0
+    assert os.path.exists(output_file)
+    assert os.path.getsize(output_file) > 0
 
 def test_invalid_format():
     # Test invalid format
@@ -251,4 +251,31 @@ def test_html_export():
     
     # Save for inspection
     with open('test_output.html', 'wb') as f:
-        f.write(html_bytes) 
+        f.write(html_bytes)
+
+def test_output_file_behavior():
+    """Test both output methods - direct bytes and file output"""
+    
+    # Test bytes output
+    pdf_bytes = ExportMd.to(
+        markdown=SAMPLE_MARKDOWN,
+        format='pdf'
+    )
+    assert isinstance(pdf_bytes, bytes)
+    assert len(pdf_bytes) > 0
+    
+    # Test direct file output
+    output_file = "test_direct.pdf"
+    result = ExportMd.to(
+        markdown=SAMPLE_MARKDOWN,
+        format='pdf',
+        output_file=str(output_file)
+    )
+    assert result is None  # Should return None when using output_file
+    assert os.path.exists(output_file)
+    assert os.path.getsize(output_file) > 0
+    
+    # Compare outputs are identical
+    with open(output_file, 'rb') as f:
+        file_bytes = f.read()
+    assert file_bytes == pdf_bytes 

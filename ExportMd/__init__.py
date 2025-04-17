@@ -31,11 +31,11 @@ class ExportMd:
             markdown (str): Input markdown text
             format (str): Output format ('html', 'pdf', 'docx', or 'pptx')
             output_file (str): Optional output file path
-            style (str): CSS style to use ('style1', 'style2', 'style3' or 'custom')
+            style (str): CSS style to use ('style', 'style1', 'style2', 'style3' or 'custom')
             custom_css (str): Custom CSS string to use when style='custom'
             
         Returns:
-            bytes: Converted document as bytes
+            bytes: Converted document as bytes (or None if output_file is specified)
         """
         exporters = {
             'html': HTMLExporter(),
@@ -62,6 +62,7 @@ class ExportMd:
                     f.write(html)
                 else:
                     f.write(output)
+            return None  # Return None when saving to file
                 
         return output
 
